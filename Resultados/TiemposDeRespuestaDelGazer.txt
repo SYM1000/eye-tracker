@@ -1,0 +1,12 @@
+Inicio:  1  Destino:  2  Tiempo:  89
+Inicio:  1  Destino:  3  Tiempo:  92
+Inicio:  1  Destino:  4  Tiempo:  88
+Inicio:  2  Destino:  1  Tiempo:  88
+Inicio:  2  Destino:  3  Tiempo:  88
+Inicio:  2  Destino:  4  Tiempo:  89
+Inicio:  3  Destino:  1  Tiempo:  89
+Inicio:  3  Destino:  2  Tiempo:  88
+Inicio:  3  Destino:  4  Tiempo:  92
+Inicio:  4  Destino:  1  Tiempo:  88
+Inicio:  4  Destino:  2  Tiempo:  88
+Inicio:  4  Destino:  3  Tiempo:  87

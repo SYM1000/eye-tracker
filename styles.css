@@ -1,0 +1,103 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.option {
+    font-size: 60px;
+    border: 1px solid black;
+    width: 25%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(orange var(--percentage), white 0);
+}
+
+.option-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.option-2 {
+    position: absolute;
+    top: 0;
+    right: 0%;
+}
+
+.option-3 {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+}
+
+.option-4 {
+    bottom: 0%;
+    right: 0%;
+    position: absolute;
+}
+
+@property --percentage {
+    initial-value: 0%;
+    inherits: false;
+    syntax: "<percentage>";
+}
+  
+@keyframes timer {
+to {
+    --percentage: 100%;
+   }
+}
+
+/* Calibration button styling */
+.Calibration{
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-color: orange;
+    /* opacity: 0.2; */
+    border-color: white;
+    border-style: solid;
+    position:fixed;
+}
+
+/* Calibration point position */
+#Pt1{
+    top: 2vw;
+    left:2vw;
+}
+#Pt2{
+    top: 2vw;
+    left:50vw;
+}
+#Pt3{
+    top: 2vw;
+    right:2vw;
+}
+#Pt4{
+    top:50vh;
+    left:2vw;
+}
+#Pt5{
+    top: 50vh;
+    left: 50vw;
+}
+#Pt6{
+    top: 50vh;
+    right:2vw;
+}
+#Pt7{
+    bottom:2vw;
+    left: 2vw;
+}
+#Pt8{
+    bottom:2vw;
+    left:50vw;
+}
+#Pt9{
+    bottom:2vw;
+    right:2vw;
+}

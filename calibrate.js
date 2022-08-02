@@ -2,6 +2,11 @@
 
 // window.saveDataAcrossSessions = true // Guardar la información a través de sesiones con la que entrenamos el modelo
 // webgazer.showVideoPreview(false) // Ocultar miniatura de la camara del usuario
+import dgram from 'node:dgram';
+import { Buffer } from 'node:buffer';
+const client = dgram.createSocket('udp4');
+
+
 let allData = ""
 let target = "9"
 let testingTime = 2000
@@ -14,6 +19,8 @@ var isRecording = false
 allData += "screen_width: " + window.innerWidth + " screen_height: " + window.innerHeight + "\n"
 allData += "target_point: " + target + " target_x: " + my98vw + " target_y: " + (window.innerHeight - my2vw) + "\n"
 
+let message;
+
 webgazer.setGazeListener(function (data, elapsedTime) {
     if (data == null) {
         return;
@@ -22,6 +29,10 @@ webgazer.setGazeListener(function (data, elapsedTime) {
     if (isRecording) {
         allData += "x: " + data.x + " y: " + data.y + "\n"
     }
+
+    message = data.x + " " + data.y;
+    client.send(Buffer.from(message), 8080, 'localhost');
+
 
 }).begin();
 
@@ -98,8 +109,8 @@ window.addEventListener('keydown', (event) => {
         allData = ""
         allData += "screen_width: " + window.innerWidth + " screen_height: " + window.innerHeight + "\n"
         allData += "target_point: " + target + " target_x: " + (window.innerWidth - (window.innerWidth * 0.02)) + " target_y: " + (window.innerHeight - (window.innerWidth * 0.02)) + "\n"
+    
     }
-
 })
 
 

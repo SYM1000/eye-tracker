@@ -1,0 +1,18 @@
+Para los siguientes experimentos de análisis de señales cerebrales y estímulos de diferentes frecuencias,
+además de utilizar la librería webgazer.js de javascript para revisar el punto de atención de los sujetos:
+
+1. Sacar los centroides (de coordenadas dadas por webgazer) de donde este viendo el sujeto durante la estimulación
+2. Revisar cuánto tiempo tardó el sujeto en enfocar su vista al objetivo de estimulación desde que se le haya indicado
+utilizando ventanas de tiempo (aprox 10 puntos de webgazer y verificar que [70-100]% de ellos haya caído en el objetivo)
+    --> Sacar el promedio en acertar el estímulo individualmente [101, 102, 103, 104, 105] y general (promedio de todas las marcas)
+
+Tamaño de los estímulos:
+- 120px X 120px
+
+Coordenadas de los estímulos:
+101 (Izquiera)  - 
+102 (Arriba)    - 
+103 (Derecha)   - 
+104 (Abajo)     - 
+105 (Stop)      - (960, 484)
+

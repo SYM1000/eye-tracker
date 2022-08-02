@@ -21,12 +21,8 @@ webgazer.setGazeListener(function (data, elapsedTime) {
     }
 
     if (isRecording) {
-        allData += "x: " + data.x + " y: " + data.y + "\n"
+        allData += "x: " + data.x + " y: " + data.y + " timestamp: " + Date.now() + "\n"
     }
-
-    message = data.x + " " + data.y;
-    client.send(Buffer.from(message), 8080, 'localhost');
-
 
 }).begin();
 

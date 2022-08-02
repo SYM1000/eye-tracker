@@ -2,10 +2,6 @@
 
 // window.saveDataAcrossSessions = true // Guardar la información a través de sesiones con la que entrenamos el modelo
 // webgazer.showVideoPreview(false) // Ocultar miniatura de la camara del usuario
-import dgram from 'node:dgram';
-import { Buffer } from 'node:buffer';
-const client = dgram.createSocket('udp4');
-
 
 let allData = ""
 let target = "9"
@@ -18,8 +14,6 @@ var isRecording = false
 
 allData += "screen_width: " + window.innerWidth + " screen_height: " + window.innerHeight + "\n"
 allData += "target_point: " + target + " target_x: " + my98vw + " target_y: " + (window.innerHeight - my2vw) + "\n"
-
-let message;
 
 webgazer.setGazeListener(function (data, elapsedTime) {
     if (data == null) {

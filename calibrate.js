@@ -2,6 +2,7 @@
 
 // window.saveDataAcrossSessions = true // Guardar la información a través de sesiones con la que entrenamos el modelo
 // webgazer.showVideoPreview(false) // Ocultar miniatura de la camara del usuario
+
 let allData = ""
 let target = "9"
 let testingTime = 2000
@@ -20,7 +21,7 @@ webgazer.setGazeListener(function (data, elapsedTime) {
     }
 
     if (isRecording) {
-        allData += "x: " + data.x + " y: " + data.y + "\n"
+        allData += "x: " + data.x + " y: " + data.y + " timestamp: " + Date.now() + "\n"
     }
 
 }).begin();
@@ -98,8 +99,8 @@ window.addEventListener('keydown', (event) => {
         allData = ""
         allData += "screen_width: " + window.innerWidth + " screen_height: " + window.innerHeight + "\n"
         allData += "target_point: " + target + " target_x: " + (window.innerWidth - (window.innerWidth * 0.02)) + " target_y: " + (window.innerHeight - (window.innerWidth * 0.02)) + "\n"
+    
     }
-
 })
 
 

@@ -1,0 +1,28 @@
+Acerca de los recursos dentro de este directorio.
+
+"S1"
+Contiene 2 archivos con datos de los
+experimentos y 2 archivos grabaciones de webgazer:
+-	data_mOO.txt
+-	data_mCB.txt
+-	eye tracker mOO.txt
+-	eye tracker mCB.txt
+Los archivos de data contienen los identificadores de los estímulos durante el
+experimento así como timestamps para identificar los instantes de tiempo.
+En los archivos de webgazer se tienen grabadas las predicciones dadas por la
+librería junto con un timestamp, para poder contrastar las marcas de los estímulos
+junto con las predicciones.
+
+"eye tracker stimulus.drawio" / "eye tracker stimulus.png"
+Se refiere a un gráfico donde explica el acomodo de los elementos de la aplicación
+web donde se encuentra en uso webgazer y otro gráfico con el acomodo de los
+elementos dentro de la aplicación con la interfaz cerebro computadora (experimento)
+
+"eye_tracker_analysis.ipynb"
+Un archivo de jupyter notebook con el código necesario para leer los archivos
+dentro de la carpeta "S1" y realizar el análisis de sus datos. Escrito en python.
+
+"S1_mCBexperiment_graphic.png" / "S1_mOOexperiment_graphic.png"
+Gráficas donde se muestran graficadas las predicciones de los puntos de webgazer,
+al igual que los centroides de esas predicciones en color rojo y los centros de
+los estímulos dentro de la ventana de la experimentación en color naranja.
